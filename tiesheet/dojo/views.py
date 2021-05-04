@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse("This is Dojo")
+    return render(request, "dojo/index.html")

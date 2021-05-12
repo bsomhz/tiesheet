@@ -1,7 +1,6 @@
 from django.urls import path
-
-from . import views
+from dojo.views import DojoListView
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', DojoListView.as_view()),
 ]

@@ -31,6 +31,9 @@ class Dojo(models.Model):
 class Player(models.Model):
     first_name = models.CharField(max_length=128)
     last_name = models.CharField(max_length=128)
+    weight = models.IntegerField(null=True, blank=True)
+    height = models.DecimalField(
+        max_digits=5, decimal_places=2, null=True, blank=True)
     dojo = models.ForeignKey(Dojo, on_delete=models.CASCADE)
 
     def __str__(self):
